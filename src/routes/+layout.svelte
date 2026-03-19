@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import { page } from '$app/state';
-	import favicon from '$lib/assets/favicon.svg';
+	import KVV from '$lib/assets/KVV.svg';
 	import type { Snippet } from 'svelte';
 
 	type Props = {
@@ -26,7 +26,7 @@
 
 <svelte:head>
 	<title>{getTitleByPathName(page.url.pathname)}</title>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={KVV} />
 </svelte:head>
 
 <div class="py-7">
