@@ -3,6 +3,23 @@
 
 	const EXPS = [
 		{
+			companyName: 'Datagile',
+			companyLink: 'https://datagile.ru/',
+			employedTime: 'апрель 2025 – настоящее время',
+			jobDone: {
+				'': [
+					'Проектирование пользовательских сценариев и интерфейсов для web',
+					'Создание и развитие дизайн-системы на несколько продуктов',
+					'User flow, JTBD, проведение интервью, анализ конкурентов',
+					'Создание интерактивных прототипов и микро-анимаций ',
+					'Проведение UX-аудита и оптимизация существующих решений',
+					'Взаимодействие с командой по Agile:Scrum',
+					'Дизайн-ревью',
+					'Презентация решений команде и стейкхолдерам',
+				],
+			},
+		},
+		{
 			companyName: 'IBS Dunice',
 			companyLink: 'https://www.dunice.net/ru',
 			employedTime: 'май 2020 – декабрь 2023',
@@ -42,10 +59,10 @@
 	] as const;
 </script>
 
-<div class="flex flex-col items-start gap-6">
+<div class="flex flex-col items-start gap-6 not-lg:gap-4">
 	<span class="text-4xl font-bold">Опыт</span>
 
-	<div class="flex flex-row gap-10 not-lg:flex-col">
+	<div class="grid grid-cols-2 gap-10 not-lg:grid-cols-1 not-lg:gap-6">
 		{#each EXPS as { companyName, companyLink, employedTime, jobDone } (companyName)}
 			<div class="flex-1">
 				<span class="text-2xl font-bold">
