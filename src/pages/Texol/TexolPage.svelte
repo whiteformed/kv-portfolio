@@ -110,7 +110,7 @@
 		<Link
 			href="https://www.figma.com/design/RzZ75RykZXqkDX7pxu5CkE/Цифровой-инспектор?node-id=1-7306&t=a1ZQ4sCs6nTd1PBF-1"
 			target="_blank"
-			class="my-4 rounded-xl bg-blue-950 p-4 text-xl text-blue-300 opacity-80 hover:-translate-y-0.5 transition-all shadow hover:shadow-blue-600"
+			class="rounded-xl bg-blue-950 p-4 text-xl text-blue-300 opacity-80 hover:-translate-y-0.5 active:-translate-y-0.5 transition-all shadow hover:shadow-blue-600 active:shadow-blue-600"
 		>
 			🔗 Ссылка на фигму
 		</Link>

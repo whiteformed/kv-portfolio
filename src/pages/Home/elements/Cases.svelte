@@ -32,7 +32,7 @@
 		{#each PATHS as { title, src, path } (path)}
 			<Link
 				href={resolve(path)}
-				class="flex flex-1 cursor-pointer flex-col overflow-hidden rounded-2xl hover:-translate-y-2 transition-all shadow hover:shadow-blue-600"
+				class="flex flex-1 cursor-pointer flex-col overflow-hidden rounded-2xl hover:-translate-y-2 active:-translate-y-2 transition-all shadow hover:shadow-blue-600 active:shadow-blue-600"
 			>
 				<Image {src} alt={title} class="h-fit" />
 				<div
