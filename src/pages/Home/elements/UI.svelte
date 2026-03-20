@@ -20,6 +20,7 @@
 					alt={`Karlova Valeria, Shot ${index}`}
 					referrerpolicy="no-referrer"
 					class="rounded-4xl"
+					useViewer
 				/>
 			</CarouselSlide>
 		{/each}
