@@ -43,7 +43,7 @@
 		tabindex="-1"
 	>
 		<div
-			class="z-10 max-w-8/10 overflow-hidden not-md:max-w-full"
+			class="z-10 max-w-8/10 max-h-9/10 overflow-hidden not-md:max-w-full"
 			in:fly={{ y: 300, duration: 300 }}
 		>
 			<div class="content max-h-dvh overflow-auto">
