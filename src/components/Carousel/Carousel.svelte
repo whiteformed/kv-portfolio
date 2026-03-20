@@ -42,9 +42,9 @@
 	};
 </script>
 
-<div class="w-full">
+<div class="w-full h-full">
 	<div
-		class="w-full overflow-hidden"
+		class="w-full h-full overflow-hidden"
 		onemblaInit={onInit}
 		use:useEmblaCarousel={{ options, plugins }}
 	>
