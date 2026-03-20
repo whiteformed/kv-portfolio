@@ -43,6 +43,7 @@
 	"dependencies": {
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-svelte": "^8.6.0",
-		"tailwind-merge": "^3.5.0"
+		"tailwind-merge": "^3.5.0",
+		"uuidv4": "^6.2.13"
 	}
 }

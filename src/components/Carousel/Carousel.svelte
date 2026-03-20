@@ -5,10 +5,12 @@
 	import type { Snippet } from 'svelte';
 
 	type Props = {
+		ref?: HTMLElement;
+		showDots?: boolean;
 		children: Snippet;
 	};
 
-	const { children }: Props = $props();
+	const { ref = $bindable(), showDots = true, children }: Props = $props();
 
 	let emblaApi: EmblaCarouselType;
 	let options: EmblaOptionsType = { loop: true };
@@ -49,18 +51,20 @@
 		<div class="flex touch-pan-y touch-pinch-zoom">
 			{@render children()}
 		</div>
-		<div class="mt-4 flex justify-center">
-			{#each scrollSnaps as snap, index (index)}
-				{@const active = selectedSnap === index}
-				<div
-					data-snap={snap}
-					role="button"
-					tabindex="-1"
-					onkeydown={() => {}}
-					class={`mx-2 inline-block size-2.5 cursor-pointer rounded-md bg-white ${active ? 'opacity-70' : 'opacity-40'} hover:opacity-100 active:opacity-100 transition-opacity`}
-					onclick={() => scrollTo(index)}
-				></div>
-			{/each}
-		</div>
+		{#if showDots && scrollSnaps.length > 1}
+			<div class="mt-4 flex justify-center">
+				{#each scrollSnaps as snap, index (index)}
+					{@const active = selectedSnap === index}
+					<div
+						data-snap={snap}
+						role="button"
+						tabindex="-1"
+						onkeydown={() => {}}
+						class={`mx-2 inline-block size-2.5 cursor-pointer rounded-md bg-white ${active ? 'opacity-70' : 'opacity-40'} hover:opacity-100 active:opacity-100 transition-opacity`}
+						onclick={() => scrollTo(index)}
+					></div>
+				{/each}
+			</div>
+		{/if}
 	</div>
 </div>

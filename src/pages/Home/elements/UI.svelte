@@ -5,6 +5,7 @@
 	import Carousel1 from '$lib/assets/Home/Carousel1.webp';
 	import Carousel2 from '$lib/assets/Home/Carousel2.webp';
 	import Carousel3 from '$lib/assets/Home/Carousel3.webp';
+	import { v4 as uuidv4 } from 'uuid';
 
 	const SLIDES = [Carousel1, Carousel2, Carousel3];
 </script>
@@ -13,6 +14,7 @@
 	<span class="text-4xl font-bold">UI</span>
 
 	<Carousel>
+		{@const groupId = uuidv4()}
 		{#each SLIDES as src, index (src)}
 			<CarouselSlide>
 				<Image
@@ -21,6 +23,7 @@
 					referrerpolicy="no-referrer"
 					class="rounded-4xl"
 					useViewer
+					{groupId}
 				/>
 			</CarouselSlide>
 		{/each}
