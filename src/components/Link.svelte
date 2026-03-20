@@ -11,4 +11,6 @@
 	const { children, class: classNameValue, ...props }: Props = $props();
 </script>
 
-<a class={twMerge('w-fit text-blue-400', classNameValue)} {...props}>{@render children()}</a>
+<a class={twMerge('w-fit text-blue-400 hover:opacity-85', classNameValue)} {...props}
+	>{@render children()}</a
+>

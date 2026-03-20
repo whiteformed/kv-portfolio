@@ -22,12 +22,20 @@
 
 		<div class="flex flex-row flex-wrap gap-2">
 			{#each ['Figma', 'UX/UI', 'JTBD', 'User Flow', 'Анализ конкурентов', 'Дизайн-системы'] as text (text)}
-				<Badge class="bg-green-950 text-lime-600 opacity-80">{text}</Badge>
+				<Badge
+					class="bg-green-950 text-lime-600 opacity-80 hover: hover:-translate-y-0.5 transition-all"
+				>
+					{text}
+				</Badge>
 			{/each}
 		</div>
 		<div class="flex flex-row flex-wrap gap-2">
 			{#each ['Презентация', 'Организация работы', 'Коммуникация', 'Тайм-менеджмент'] as text (text)}
-				<Badge class="bg-yellow-950 text-yellow-500 opacity-80">{text}</Badge>
+				<Badge
+					class="bg-yellow-950 text-yellow-500 opacity-80 hover: hover:-translate-y-0.5 transition-all"
+				>
+					{text}
+				</Badge>
 			{/each}
 		</div>
 	</div>
