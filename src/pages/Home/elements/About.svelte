@@ -14,7 +14,7 @@
 		<span class="text-l">Опыт работы: более 5 лет</span>
 		<ContactInfo />
 
-		<span class="my-4 text-2xl font-extralight">
+		<span class="my-4 text-xl font-extralight">
 			Привет! Четыре года занимаюсь проектированием веб-интерфейсов, мобильных приложений и
 			высоконагруженных систем. Ориентируюсь в гайдлайнах и понимаю, как строятся дизайн-системы.
 			Понимаю и применяю принцип «делать≠сделать»
@@ -23,7 +23,7 @@
 		<div class="flex flex-row flex-wrap gap-2">
 			{#each ['Figma', 'UX/UI', 'JTBD', 'User Flow', 'Анализ конкурентов', 'Дизайн-системы'] as text (text)}
 				<Badge
-					class="bg-green-950 text-lime-600 opacity-80 hover: hover:-translate-y-0.5 transition-all"
+					class="bg-green-950 text-lime-600 opacity-80 hover:opacity-100 hover:-translate-y-0.5 transition-all"
 				>
 					{text}
 				</Badge>
@@ -32,7 +32,7 @@
 		<div class="flex flex-row flex-wrap gap-2">
 			{#each ['Презентация', 'Организация работы', 'Коммуникация', 'Тайм-менеджмент'] as text (text)}
 				<Badge
-					class="bg-yellow-950 text-yellow-500 opacity-80 hover: hover:-translate-y-0.5 transition-all"
+					class="bg-yellow-950 text-yellow-500 opacity-80 hover:opacity-100 hover:-translate-y-0.5 transition-all"
 				>
 					{text}
 				</Badge>
