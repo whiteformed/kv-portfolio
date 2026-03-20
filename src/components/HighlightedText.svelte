@@ -13,7 +13,7 @@
 </script>
 
 <span
-	class={twMerge('inline-block rounded bg-cyan-900 p-1 text-cyan-300 opacity-70', classNameValue)}
+	class={twMerge('inline-block rounded bg-cyan-950 p-1 text-cyan-400 opacity-80', classNameValue)}
 	{...props}
 >
 	{@render children()}

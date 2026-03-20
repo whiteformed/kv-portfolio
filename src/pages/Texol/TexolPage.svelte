@@ -62,18 +62,22 @@
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">Мои задачи</span>
 		<span class="text-xl font-extralight">
-			{#each JOBS_LIST as jobDone, index (index)}
-				<li class="mt-1 ml-4">{jobDone}</li>
-			{/each}
+			<ul>
+				{#each JOBS_LIST as jobDone, index (index)}
+					<li class="mt-1 ml-4">{jobDone}</li>
+				{/each}
+			</ul>
 		</span>
 	</div>
 
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">Процесс работы</span>
 		<span class="text-xl font-extralight">
-			{#each PROCESSES_LIST as process, index (index)}
-				<li class="mt-1 ml-4">{process}</li>
-			{/each}
+			<ul>
+				{#each PROCESSES_LIST as process, index (index)}
+					<li class="mt-1 ml-4">{process}</li>
+				{/each}
+			</ul>
 		</span>
 		<span class="text-xl font-extralight">
 			<HighlightedText>
@@ -87,25 +91,27 @@
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">⚡️Итоги</span>
 		<span class="text-xl font-extralight">
-			<li class="mt-1 ml-4">
-				<span class="text-xl font-extralight">
-					Теперь проверка вагонов-цистерн происходит
-					<HighlightedText>в 2 раза быстрее</HighlightedText>
-				</span>
-			</li>
-			<li class="mt-1 ml-4">
-				<span class="text-xl font-extralight">
-					<HighlightedText>Убытки компании сократились на 57%</HighlightedText>
-					после автоматизации работы полевых сотрудников. Это произошло за счет сокращения простоев техники
-					и числа ошибок, связанных с человеческим фактором
-				</span>
-			</li>
-			<li class="mt-1 ml-4">
-				<span class="text-xl font-extralight">
-					<HighlightedText>На 146% повысилась прозрачность</HighlightedText>
-					производственных процессов
-				</span>
-			</li>
+			<ul>
+				<li class="mt-1 ml-4">
+					<span class="text-xl font-extralight">
+						Теперь проверка вагонов-цистерн происходит
+						<HighlightedText>в 2 раза быстрее</HighlightedText>
+					</span>
+				</li>
+				<li class="mt-1 ml-4">
+					<span class="text-xl font-extralight">
+						<HighlightedText>Убытки компании сократились на 57%</HighlightedText>
+						после автоматизации работы полевых сотрудников. Это произошло за счет сокращения простоев
+						техники и числа ошибок, связанных с человеческим фактором
+					</span>
+				</li>
+				<li class="mt-1 ml-4">
+					<span class="text-xl font-extralight">
+						<HighlightedText>На 146% повысилась прозрачность</HighlightedText>
+						производственных процессов
+					</span>
+				</li>
+			</ul>
 		</span>
 		<Link
 			href="https://www.figma.com/design/RzZ75RykZXqkDX7pxu5CkE/Цифровой-инспектор?node-id=1-7306&t=a1ZQ4sCs6nTd1PBF-1"

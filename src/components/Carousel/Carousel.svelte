@@ -62,6 +62,7 @@
 						onkeydown={() => {}}
 						class={`mx-2 inline-block size-2.5 cursor-pointer rounded-md bg-white ${active ? 'opacity-70' : 'opacity-40'} hover:opacity-100 active:opacity-100 transition-opacity`}
 						onclick={() => scrollTo(index)}
+						aria-label={`item #${index + 1}`}
 					></div>
 				{/each}
 			</div>

@@ -83,9 +83,11 @@
 							{/if}
 							{@const points = values as string[]}
 
-							{#each points as point, index (index)}
-								<li class="mt-1 ml-4">{point}</li>
-							{/each}
+							<ul>
+								{#each points as point, index (index)}
+									<li class="mt-1 ml-4">{point}</li>
+								{/each}
+							</ul>
 						{/each}
 					</span>
 				</div>

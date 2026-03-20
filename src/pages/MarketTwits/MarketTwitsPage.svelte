@@ -80,9 +80,11 @@
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">Мои задачи</span>
 		<span class="text-xl font-extralight">
-			{#each JOBS_LIST as jobDone, index (index)}
-				<li class="mt-1 ml-4">{jobDone}</li>
-			{/each}
+			<ul>
+				{#each JOBS_LIST as jobDone, index (index)}
+					<li class="mt-1 ml-4">{jobDone}</li>
+				{/each}
+			</ul>
 		</span>
 	</div>
 
@@ -106,9 +108,11 @@
 			выбранных источников.
             
             Есть два типа источников:`}
-			{#each SOURCES_LIST as source, index (index)}
-				<li class="mt-1 ml-4">{source}</li>
-			{/each}
+			<ul>
+				{#each SOURCES_LIST as source, index (index)}
+					<li class="mt-1 ml-4">{source}</li>
+				{/each}
+			</ul>
 
 			{`\nА также есть возможность самому добавить тг-каналы.
             Внешние ресурсы добавляет и модерирует админ.`}
@@ -138,9 +142,11 @@
 
 		<span class="text-xl font-extralight whitespace-pre-line">
 			Что доступно пользователям в созданном виджете:
-			{#each WIDGET_AVAILABLE_LIST as source, index (index)}
-				<li class="mt-1 ml-4">{source}</li>
-			{/each}
+			<ul>
+				{#each WIDGET_AVAILABLE_LIST as source, index (index)}
+					<li class="mt-1 ml-4">{source}</li>
+				{/each}
+			</ul>
 			{``}
 			Таким образом, новостной виджет позволяет одновременно считывать максимальное количество новостей
 			из разных источников на одном экране, иметь гибкую персонализацию через добавление категорий новостей

@@ -15,6 +15,7 @@
 
 	const {
 		src,
+		fetchpriority = 'high',
 		alt,
 		groupId = uuidv4(),
 		class: classNameValue,
@@ -53,6 +54,7 @@
 	<enhanced:img
 		bind:this={ref}
 		{src}
+		{fetchpriority}
 		{alt}
 		class={twMerge(classNameValue, useViewer && 'cursor-pointer')}
 		{draggable}

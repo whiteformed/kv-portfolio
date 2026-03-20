@@ -31,9 +31,11 @@
 			</span>
 			<div class="mt-4 flex-1">
 				<span class="text-xl">
-					{#each set as skill, index (index)}
-						<li class="mt-1 ml-4">{skill}</li>
-					{/each}
+					<ul>
+						{#each set as skill, index (index)}
+							<li class="mt-1 ml-4">{skill}</li>
+						{/each}
+					</ul>
 				</span>
 			</div>
 		</div>

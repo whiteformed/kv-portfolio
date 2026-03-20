@@ -81,9 +81,11 @@
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">Процесс работы</span>
 		<span class="text-xl font-extralight">
-			{#each PROCESSES_LIST as process, index (index)}
-				<li class="mt-1 ml-4">{process}</li>
-			{/each}
+			<ul>
+				{#each PROCESSES_LIST as process, index (index)}
+					<li class="mt-1 ml-4">{process}</li>
+				{/each}
+			</ul>
 		</span>
 		<span class="text-xl font-extralight">
 			<HighlightedText>
@@ -97,9 +99,11 @@
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">Мои задачи</span>
 		<span class="text-xl font-extralight">
-			{#each JOBS_LIST as jobDone, index (index)}
-				<li class="mt-1 ml-4">{jobDone}</li>
-			{/each}
+			<ul>
+				{#each JOBS_LIST as jobDone, index (index)}
+					<li class="mt-1 ml-4">{jobDone}</li>
+				{/each}
+			</ul>
 		</span>
 	</div>
 

@@ -45,7 +45,7 @@
 			Понимаю и применяю принцип «делать≠сделать»`}
 		</span>
 
-		{@render badgeList(BADGE_LIST_1, 'bg-green-950 text-lime-600')}
+		{@render badgeList(BADGE_LIST_1, 'bg-green-950 text-lime-500')}
 		{@render badgeList(BADGE_LIST_2, 'bg-yellow-950 text-yellow-500')}
 	</div>
 </div>
