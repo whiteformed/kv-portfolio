@@ -1,9 +1,35 @@
-<script>
+<script lang="ts">
 	import Badge from '$components/Badge.svelte';
 	import ContactInfo from '$components/ContactInfo.svelte';
 	import Image from '$components/Image.svelte';
 	import Avatar from '$lib/assets/Avatar.webp';
+	import { type ClassNameValue } from 'tailwind-merge';
+
+	const BADGE_LIST_1 = [
+		'Figma',
+		'UX/UI',
+		'JTBD',
+		'User Flow',
+		'Анализ конкурентов',
+		'Дизайн-системы',
+	];
+	const BADGE_LIST_2 = ['Презентация', 'Организация работы', 'Коммуникация', 'Тайм-менеджмент'];
 </script>
+
+{#snippet badgeList(list: string[], mixin: ClassNameValue)}
+	<div class="flex flex-row flex-wrap gap-2">
+		{#each list as text (text)}
+			<Badge
+				class={[
+					'opacity-80 hover:opacity-100 active:opacity-100 hover:-translate-y-0.5 active:-translate-y-0.5 transition-all',
+					mixin,
+				]}
+			>
+				{text}
+			</Badge>
+		{/each}
+	</div>
+{/snippet}
 
 <div class="flex flex-col items-start gap-6 not-sm:gap-2">
 	<div>
@@ -19,23 +45,7 @@
 			Понимаю и применяю принцип «делать≠сделать»`}
 		</span>
 
-		<div class="flex flex-row flex-wrap gap-2">
-			{#each ['Figma', 'UX/UI', 'JTBD', 'User Flow', 'Анализ конкурентов', 'Дизайн-системы'] as text (text)}
-				<Badge
-					class="bg-green-950 text-lime-600 opacity-80 hover:opacity-100 active:opacity-100 hover:-translate-y-0.5 active:-translate-y-0.5 transition-all"
-				>
-					{text}
-				</Badge>
-			{/each}
-		</div>
-		<div class="flex flex-row flex-wrap gap-2">
-			{#each ['Презентация', 'Организация работы', 'Коммуникация', 'Тайм-менеджмент'] as text (text)}
-				<Badge
-					class="bg-yellow-950 text-yellow-500 opacity-80 hover:opacity-100 active:opacity-100 hover:-translate-y-0.5 active:-translate-y-0.5 transition-all"
-				>
-					{text}
-				</Badge>
-			{/each}
-		</div>
+		{@render badgeList(BADGE_LIST_1, 'bg-green-950 text-lime-600')}
+		{@render badgeList(BADGE_LIST_2, 'bg-yellow-950 text-yellow-500')}
 	</div>
 </div>
