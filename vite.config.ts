@@ -6,8 +6,8 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [
-		tailwindcss(),
 		enhancedImages(), // must come before the SvelteKit plugin
+		tailwindcss(),
 		sveltekit(),
 	],
 });

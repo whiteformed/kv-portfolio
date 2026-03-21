@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { type Picture } from '@sveltejs/enhanced-img';
 	import Badge from '$components/Badge.svelte';
 	import HighlightedText from '$components/HighlightedText.svelte';
 	import Image from '$components/Image.svelte';
@@ -9,7 +10,8 @@
 	import SberUniversityFlowExample5 from '$images/SberUniversity/SberUniversityFlowExample5.webp';
 	import SberUniversityFlowExample6 from '$images/SberUniversity/SberUniversityFlowExample6.webp';
 	import SberUniversityFlowExample7 from '$images/SberUniversity/SberUniversityFlowExample7.webp';
-	import SberUniversityMain from '$images/SberUniversity/SberUniversityMain.webp';
+	import SberUniversityMain from '$images/SberUniversity/SberUniversityMain.webp?enhanced';
+	import { v4 as uuidv4 } from 'uuid';
 
 	const ROLES_LIST = [
 		{
@@ -38,16 +40,33 @@
 		'Работала с готовой дизайн-системой, при необходимости создавая на ее основе новые компоненты',
 		"Взаимодействовала с product owner'ом, арт-директором и руководителем проекта",
 	];
+
+	const REDESIGN_EXAMPLES = [
+		{ src: SberUniversityFlowExample1 },
+		{ src: SberUniversityFlowExample2 },
+	];
+
+	const LAYOUT_EXAMPLES = [
+		{ src: SberUniversityFlowExample3, description: 'Главная страница и форма создания проекта' },
+		{ src: SberUniversityFlowExample4, description: 'Файлы, загруженные мной и форма загрузки' },
+		{ src: SberUniversityFlowExample5, description: 'Страница спикера и форма создания нового' },
+		{ src: SberUniversityFlowExample6, description: 'Теги и пустая страница' },
+		{ src: SberUniversityFlowExample7, description: 'Поиск и аналитика' },
+	];
 </script>
 
-{#snippet imgWithSubtitle(src: string, subtitle?: string)}
-	{@const alt = src.split('/').at(-1)}
-	<div class="flex flex-col gap-2">
-		<Image {src} {alt} class="rounded-xl" draggable="false" useViewer />
-		{#if subtitle}
-			<Badge class="rounded py-0">{subtitle}</Badge>
-		{/if}
-	</div>
+{#snippet imgWithSubtitleGroup(group: { src: string | Picture; description?: string }[])}
+	{@const groupId = uuidv4()}
+	{#each group as { src, description }, index (index)}
+		{@const source = typeof src === 'string' ? src : src.img.src}
+		{@const alt = source.split('/').at(-1)}
+		<div class="flex flex-col gap-2">
+			<Image {src} {alt} {groupId} class="rounded-xl" useViewer />
+			{#if description}
+				<Badge class="rounded py-0">{description}</Badge>
+			{/if}
+		</div>
+	{/each}
 {/snippet}
 
 <div class="flex flex-col items-start gap-6">
@@ -56,7 +75,7 @@
 		Облачный сервис для сотрудников СберУниверситета, с помощью которого можно хранить и передавать
 		коллегам файлы и папки, редактировать видео-контент.
 	</span>
-	{@render imgWithSubtitle(SberUniversityMain)}
+	{@render imgWithSubtitleGroup([{ src: SberUniversityMain }])}
 
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">Проект</span>
@@ -110,27 +129,13 @@
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">Примеры редизайна</span>
 
-		{@render imgWithSubtitle(SberUniversityFlowExample1)}
-		{@render imgWithSubtitle(SberUniversityFlowExample2)}
+		{@render imgWithSubtitleGroup(REDESIGN_EXAMPLES)}
 	</div>
 
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">Макеты</span>
 
-		{@render imgWithSubtitle(
-			SberUniversityFlowExample3,
-			'Главная страница и форма создания проекта',
-		)}
-		{@render imgWithSubtitle(
-			SberUniversityFlowExample4,
-			'Файлы, загруженные мной и форма загрузки',
-		)}
-		{@render imgWithSubtitle(
-			SberUniversityFlowExample5,
-			'Страница спикера и форма создания нового',
-		)}
-		{@render imgWithSubtitle(SberUniversityFlowExample6, 'Теги и пустая страница')}
-		{@render imgWithSubtitle(SberUniversityFlowExample7, 'Поиск и аналитика')}
+		{@render imgWithSubtitleGroup(LAYOUT_EXAMPLES)}
 	</div>
 
 	<div class="flex flex-col gap-4">

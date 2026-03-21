@@ -11,8 +11,11 @@
 	import MarketTwitsFlowExample6 from '$images/MarketTwits/MarketTwitsFlowExample6.webp';
 	import MarketTwitsFlowExample7 from '$images/MarketTwits/MarketTwitsFlowExample7.webp';
 	import MarketTwitsJobStories from '$images/MarketTwits/MarketTwitsJobStories.webp';
-	import MarketTwitsMain from '$images/MarketTwits/MarketTwitsMain.webp';
+	import MarketTwitsMain from '$images/MarketTwits/MarketTwitsMain.webp?enhanced';
+	import { type ComponentProps } from 'svelte';
+	import { v4 as uuidv4 } from 'uuid';
 
+	const groupId = uuidv4();
 	const JOBS_LIST = [
 		'Разработала информационную архитектуру с нуля',
 		'Спроектировала пользовательские сценарии',
@@ -41,10 +44,11 @@
 	];
 </script>
 
-{#snippet imgWithSubtitle(src: string, subtitle?: string)}
-	{@const alt = src.split('/').at(-1)}
+{#snippet imgWithSubtitle(src: ComponentProps<typeof Image>['src'], subtitle?: string)}
+	{@const source = typeof src === 'string' ? src : src.img.src}
+	{@const alt = source.split('/').at(-1)}
 	<div class="flex flex-col gap-2" draggable="false">
-		<Image {src} {alt} class="rounded-xl" useViewer />
+		<Image {src} {alt} {groupId} class="rounded-xl" useViewer />
 		<Badge class="rounded py-0">{subtitle}</Badge>
 	</div>
 {/snippet}

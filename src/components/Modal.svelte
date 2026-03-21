@@ -4,17 +4,16 @@
 
 	type Props = {
 		visible: boolean;
+		ref?: HTMLElement;
 		children: Snippet;
 	};
-	let { visible = $bindable(), children }: Props = $props();
+	let { visible = $bindable(), ref = $bindable(), children }: Props = $props();
 
 	function handleClose() {
 		visible = false;
 	}
 
 	function handleKeyDown(event: KeyboardEvent) {
-		event.stopPropagation();
-
 		if (event.key === 'Escape') {
 			handleClose();
 		}
@@ -35,6 +34,7 @@
 
 {#if visible}
 	<div
+		bind:this={ref}
 		{@attach portal}
 		class="backdrop-blur z-10 fixed top-0 left-0 right-0 bottom-0 w-full flex items-center justify-center focus:outline-none"
 		role="dialog"

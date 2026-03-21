@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { type Picture } from '@sveltejs/enhanced-img';
 	import Badge from '$components/Badge.svelte';
 	import HighlightedText from '$components/HighlightedText.svelte';
 	import Image from '$components/Image.svelte';
@@ -7,7 +8,8 @@
 	import TexolFlowExample2 from '$images/Texol/TexolFlowExample2.webp';
 	import TexolFlowExample3 from '$images/Texol/TexolFlowExample3.webp';
 	import TexolFlowExample4 from '$images/Texol/TexolFlowExample4.webp';
-	import TexolMain from '$images/Texol/TexolMain.webp';
+	import TexolMain from '$images/Texol/TexolMain.webp?enhanced';
+	import { v4 as uuidv4 } from 'uuid';
 
 	const JOBS_LIST = [
 		'Спроектировала приложение для с нуля для внутренних сотрудников с ролевой моделью',
@@ -26,16 +28,33 @@
 		'Проанализировала результаты тестов, внесла правки в основной флоу, согласовала решения со стейкхолдерами, приступила к сборке UI',
 		'После согласования подготовила макеты к разработке',
 	];
+
+	const FLOW_EXAMPLES = [
+		{ src: TexolFlowExample1, description: 'Аккаунт бригадира' },
+		{ src: TexolFlowExample2, description: 'Чек-лист' },
+		{ src: TexolFlowExample3, description: 'Замена ЗПА' },
+		{ src: TexolFlowExample4, description: 'Замена RFID-метки' },
+	];
 </script>
 
-{#snippet imgWithSubtitle(src: string, subtitle?: string)}
-	{@const alt = src.split('/').at(-1)}
-	<div class="flex flex-col gap-2">
-		<Image {src} {alt} class="rounded-xl" draggable="false" useViewer />
-		{#if subtitle}
-			<Badge class="rounded py-0">{subtitle}</Badge>
-		{/if}
-	</div>
+{#snippet imgWithSubtitleGroup(group: { src: string | Picture; description?: string }[])}
+	{@const groupId = uuidv4()}
+	{#each group as { src, description }, index (index)}
+		{@const source = typeof src === 'string' ? src : src.img.src}
+		{@const alt = source.split('/').at(-1)}
+		<div class="flex flex-col gap-2">
+			<Image
+				{src}
+				{alt}
+				groupId={source === TexolMain.img.src ? undefined : groupId}
+				class="rounded-xl"
+				useViewer
+			/>
+			{#if description}
+				<Badge class="rounded py-0">{description}</Badge>
+			{/if}
+		</div>
+	{/each}
 {/snippet}
 
 <div class="flex flex-col items-start gap-6">
@@ -44,7 +63,7 @@
 		Корпоративное мобильное приложение для проверки вагонов-цистерн до и после налива
 		нефтепродуктов.
 	</span>
-	{@render imgWithSubtitle(TexolMain)}
+	{@render imgWithSubtitleGroup([{ src: TexolMain }])}
 
 	<div class="flex flex-col gap-4">
 		<span class="text-4xl font-bold">Проект</span>
@@ -121,9 +140,6 @@
 			🔗 Ссылка на фигму
 		</Link>
 
-		{@render imgWithSubtitle(TexolFlowExample1, 'Аккаунт бригадира')}
-		{@render imgWithSubtitle(TexolFlowExample2, 'Чек-лист')}
-		{@render imgWithSubtitle(TexolFlowExample3, 'Замена ЗПА')}
-		{@render imgWithSubtitle(TexolFlowExample4, 'Замена RFID-метки')}
+		{@render imgWithSubtitleGroup(FLOW_EXAMPLES)}
 	</div>
 </div>
