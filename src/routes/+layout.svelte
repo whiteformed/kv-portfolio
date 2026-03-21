@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import { page } from '$app/state';
-	import KVV from '$lib/assets/KVV.svg';
+	import KVV from '$images/KVV.svg';
 	import type { Snippet } from 'svelte';
 
 	type Props = {
@@ -27,17 +27,17 @@
 <svelte:head>
 	<link rel="icon" href={KVV} />
 	<title>{getTitleByPathName(page.url.pathname)}</title>
-	<meta name="description" content="Валерия Карлова | Портфолио" />
+	<meta name="description" content="Валерия Карлова | Личный сайт | Портфолио" />
 
-	<meta property="og:site_name" content="Валерия Карлова | Портфолио" />
-	<meta property="og:title" content="Валерия Карлова | Портфолио" />
-	<meta property="og:type" content="portfolio" />
+	<meta property="og:title" content="Валерия Карлова" />
+	<meta property="og:description" content="Личный сайт | Портфолио" />
+	<meta property="og:url" content="https://karlova-valeria.ru" />
+	<meta property="og:image" content="/favicon.svg" />
 
-	<meta property="og:image" content={KVV} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Валерия Карлова | Портфолио" />
-	<meta property="og:image:type" content="image/webp" />
+	<meta property="og:image:alt" content="Валерия Карлова | Продуктовый | Личный сайт | Портфолио" />
+	<meta property="og:type" content="website" />
 </svelte:head>
 
 <main class="py-7">

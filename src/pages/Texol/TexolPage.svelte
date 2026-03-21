@@ -3,11 +3,11 @@
 	import HighlightedText from '$components/HighlightedText.svelte';
 	import Image from '$components/Image.svelte';
 	import Link from '$components/Link.svelte';
-	import TexolFlowExample1 from '$lib/assets/Texol/TexolFlowExample1.webp';
-	import TexolFlowExample2 from '$lib/assets/Texol/TexolFlowExample2.webp';
-	import TexolFlowExample3 from '$lib/assets/Texol/TexolFlowExample3.webp';
-	import TexolFlowExample4 from '$lib/assets/Texol/TexolFlowExample4.webp';
-	import TexolMain from '$lib/assets/Texol/TexolMain.webp';
+	import TexolFlowExample1 from '$images/Texol/TexolFlowExample1.webp';
+	import TexolFlowExample2 from '$images/Texol/TexolFlowExample2.webp';
+	import TexolFlowExample3 from '$images/Texol/TexolFlowExample3.webp';
+	import TexolFlowExample4 from '$images/Texol/TexolFlowExample4.webp';
+	import TexolMain from '$images/Texol/TexolMain.webp';
 
 	const JOBS_LIST = [
 		'Спроектировала приложение для с нуля для внутренних сотрудников с ролевой моделью',

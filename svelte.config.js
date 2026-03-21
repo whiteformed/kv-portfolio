@@ -7,6 +7,7 @@ const config = {
 		alias: {
 			$components: 'src/components',
 			$pages: 'src/pages',
+			$images: 'src/assets/images',
 		},
 	},
 	vitePlugin: {

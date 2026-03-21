@@ -2,7 +2,7 @@
 	import Badge from '$components/Badge.svelte';
 	import ContactInfo from '$components/ContactInfo.svelte';
 	import Image from '$components/Image.svelte';
-	import Avatar from '$lib/assets/Avatar.webp';
+	import Avatar from '$images/Avatar.webp';
 	import { type ClassNameValue } from 'tailwind-merge';
 
 	const BADGE_LIST_1 = [

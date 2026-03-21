@@ -3,15 +3,15 @@
 	import HighlightedText from '$components/HighlightedText.svelte';
 	import Image from '$components/Image.svelte';
 	import Link from '$components/Link.svelte';
-	import MarketTwitsFlowExample1 from '$lib/assets/MarketTwits/MarketTwitsFlowExample1.webp';
-	import MarketTwitsFlowExample2 from '$lib/assets/MarketTwits/MarketTwitsFlowExample2.webp';
-	import MarketTwitsFlowExample3 from '$lib/assets/MarketTwits/MarketTwitsFlowExample3.webp';
-	import MarketTwitsFlowExample4 from '$lib/assets/MarketTwits/MarketTwitsFlowExample4.webp';
-	import MarketTwitsFlowExample5 from '$lib/assets/MarketTwits/MarketTwitsFlowExample5.webp';
-	import MarketTwitsFlowExample6 from '$lib/assets/MarketTwits/MarketTwitsFlowExample6.webp';
-	import MarketTwitsFlowExample7 from '$lib/assets/MarketTwits/MarketTwitsFlowExample7.webp';
-	import MarketTwitsJobStories from '$lib/assets/MarketTwits/MarketTwitsJobStories.webp';
-	import MarketTwitsMain from '$lib/assets/MarketTwits/MarketTwitsMain.webp';
+	import MarketTwitsFlowExample1 from '$images/MarketTwits/MarketTwitsFlowExample1.webp';
+	import MarketTwitsFlowExample2 from '$images/MarketTwits/MarketTwitsFlowExample2.webp';
+	import MarketTwitsFlowExample3 from '$images/MarketTwits/MarketTwitsFlowExample3.webp';
+	import MarketTwitsFlowExample4 from '$images/MarketTwits/MarketTwitsFlowExample4.webp';
+	import MarketTwitsFlowExample5 from '$images/MarketTwits/MarketTwitsFlowExample5.webp';
+	import MarketTwitsFlowExample6 from '$images/MarketTwits/MarketTwitsFlowExample6.webp';
+	import MarketTwitsFlowExample7 from '$images/MarketTwits/MarketTwitsFlowExample7.webp';
+	import MarketTwitsJobStories from '$images/MarketTwits/MarketTwitsJobStories.webp';
+	import MarketTwitsMain from '$images/MarketTwits/MarketTwitsMain.webp';
 
 	const JOBS_LIST = [
 		'Разработала информационную архитектуру с нуля',

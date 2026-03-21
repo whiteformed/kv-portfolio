@@ -2,9 +2,9 @@
 	import Carousel from '$components/Carousel/Carousel.svelte';
 	import CarouselSlide from '$components/Carousel/CarouselSlide.svelte';
 	import Image from '$components/Image.svelte';
-	import Carousel1 from '$lib/assets/Home/Carousel1.webp';
-	import Carousel2 from '$lib/assets/Home/Carousel2.webp';
-	import Carousel3 from '$lib/assets/Home/Carousel3.webp';
+	import Carousel1 from '$images/Home/Carousel1.webp';
+	import Carousel2 from '$images/Home/Carousel2.webp';
+	import Carousel3 from '$images/Home/Carousel3.webp';
 	import { v4 as uuidv4 } from 'uuid';
 
 	const SLIDES = [Carousel1, Carousel2, Carousel3];

@@ -2,9 +2,9 @@
 	import { resolve } from '$app/paths';
 	import Image from '$components/Image.svelte';
 	import Link from '$components/Link.svelte';
-	import MarketTwitsPreview from '$lib/assets/MarketTwits/MarketTwitsPreview.webp';
-	import SberUniversityPreview from '$lib/assets/SberUniversity/SberUniversityPreview.webp';
-	import TexolPreview from '$lib/assets/Texol/TexolPreview.webp';
+	import MarketTwitsPreview from '$images/MarketTwits/MarketTwitsPreview.webp';
+	import SberUniversityPreview from '$images/SberUniversity/SberUniversityPreview.webp';
+	import TexolPreview from '$images/Texol/TexolPreview.webp';
 
 	const PATHS = [
 		{

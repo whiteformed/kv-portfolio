@@ -2,14 +2,14 @@
 	import Badge from '$components/Badge.svelte';
 	import HighlightedText from '$components/HighlightedText.svelte';
 	import Image from '$components/Image.svelte';
-	import SberUniversityFlowExample1 from '$lib/assets/SberUniversity/SberUniversityFlowExample1.webp';
-	import SberUniversityFlowExample2 from '$lib/assets/SberUniversity/SberUniversityFlowExample2.webp';
-	import SberUniversityFlowExample3 from '$lib/assets/SberUniversity/SberUniversityFlowExample3.webp';
-	import SberUniversityFlowExample4 from '$lib/assets/SberUniversity/SberUniversityFlowExample4.webp';
-	import SberUniversityFlowExample5 from '$lib/assets/SberUniversity/SberUniversityFlowExample5.webp';
-	import SberUniversityFlowExample6 from '$lib/assets/SberUniversity/SberUniversityFlowExample6.webp';
-	import SberUniversityFlowExample7 from '$lib/assets/SberUniversity/SberUniversityFlowExample7.webp';
-	import SberUniversityMain from '$lib/assets/SberUniversity/SberUniversityMain.webp';
+	import SberUniversityFlowExample1 from '$images/SberUniversity/SberUniversityFlowExample1.webp';
+	import SberUniversityFlowExample2 from '$images/SberUniversity/SberUniversityFlowExample2.webp';
+	import SberUniversityFlowExample3 from '$images/SberUniversity/SberUniversityFlowExample3.webp';
+	import SberUniversityFlowExample4 from '$images/SberUniversity/SberUniversityFlowExample4.webp';
+	import SberUniversityFlowExample5 from '$images/SberUniversity/SberUniversityFlowExample5.webp';
+	import SberUniversityFlowExample6 from '$images/SberUniversity/SberUniversityFlowExample6.webp';
+	import SberUniversityFlowExample7 from '$images/SberUniversity/SberUniversityFlowExample7.webp';
+	import SberUniversityMain from '$images/SberUniversity/SberUniversityMain.webp';
 
 	const ROLES_LIST = [
 		{
