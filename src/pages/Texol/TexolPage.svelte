@@ -43,13 +43,7 @@
 		{@const source = typeof src === 'string' ? src : src.img.src}
 		{@const alt = source.split('/').at(-1)}
 		<div class="flex flex-col gap-2">
-			<Image
-				{src}
-				{alt}
-				groupId={source === TexolMain.img.src ? undefined : groupId}
-				class="rounded-xl"
-				useViewer
-			/>
+			<Image {src} {alt} {groupId} class="rounded-xl" useViewer />
 			{#if description}
 				<Badge class="rounded py-0">{description}</Badge>
 			{/if}

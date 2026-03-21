@@ -48,7 +48,13 @@
 	{@const source = typeof src === 'string' ? src : src.img.src}
 	{@const alt = source.split('/').at(-1)}
 	<div class="flex flex-col gap-2" draggable="false">
-		<Image {src} {alt} {groupId} class="rounded-xl" useViewer />
+		<Image
+			{src}
+			{alt}
+			groupId={source === MarketTwitsMain.img.src ? undefined : groupId}
+			class="rounded-xl"
+			useViewer
+		/>
 		<Badge class="rounded py-0">{subtitle}</Badge>
 	</div>
 {/snippet}
