@@ -37,7 +37,7 @@
 		},
 		{
 			companyName: 'IBS Dunice',
-			companyLink: 'https://www.dunice.net/ru',
+			companyLink: 'https://dunice.net/ru',
 			employedTime: 'май 2020 – декабрь 2023',
 			jobDone: {
 				'': [

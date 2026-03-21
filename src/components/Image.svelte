@@ -66,13 +66,15 @@
 
 {#if useViewer}
 	<Modal bind:visible>
-		<Carousel>
-			{#each imageGroup as image, index (index)}
-				<CarouselSlide>
-					<div {@attach renderNode(image)}></div>
-				</CarouselSlide>
-			{/each}
-		</Carousel>
+		<div class="h-full w-full max-w-8/10 max-h-8/10 not-md:max-w-full">
+			<Carousel>
+				{#each imageGroup as image, index (index)}
+					<CarouselSlide>
+						<div {@attach renderNode(image)}></div>
+					</CarouselSlide>
+				{/each}
+			</Carousel>
+		</div>
 	</Modal>
 {/if}
 {@render image()}

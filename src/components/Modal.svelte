@@ -36,19 +36,14 @@
 {#if visible}
 	<div
 		{@attach portal}
-		class="backdrop-blur fixed top-0 left-0 right-0 bottom-0 w-full flex items-center justify-center focus:outline-none"
+		class="backdrop-blur z-10 fixed top-0 left-0 right-0 bottom-0 w-full flex items-center justify-center focus:outline-none"
 		role="dialog"
 		onclick={handleClose}
 		onkeydown={handleKeyDown}
 		tabindex="-1"
 	>
-		<div
-			class="z-10 max-w-8/10 max-h-9/10 overflow-scroll not-md:max-w-full"
-			in:fly={{ y: 300, duration: 300 }}
-		>
-			<div class="content h-full overflow-auto">
-				{@render children()}
-			</div>
+		<div class="flex justify-center items-center w-full h-full" in:fly={{ y: 300, duration: 300 }}>
+			{@render children()}
 		</div>
 	</div>
 {/if}

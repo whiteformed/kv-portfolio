@@ -11,9 +11,7 @@
 			<span class="text-xl">
 				Поддерживаю творческий тонус в свободное время, прокачивая навык создания визуальных
 				концепций, делюсь результатами на
-				<Link href="https://www.behance.net/karlovaleria" rel="external" target="_blank">
-					behance
-				</Link>
+				<Link href="https://behance.net/karlovaleria" rel="external" target="_blank">behance</Link>
 			</span>
 		</div>
 	</div>
