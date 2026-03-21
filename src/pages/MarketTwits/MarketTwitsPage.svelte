@@ -167,7 +167,7 @@
 			<span class="text-4xl font-bold">Проблемы, с которыми столкнулась и их решение</span>
 
 			<div class="flex flex-col gap-3">
-				<Badge class="rounded bg-pink-950 py-0 text-xl text-pink-400 opacity-80">Первая</Badge>
+				<Badge class="rounded bg-pink-950 py-0 text-xl text-pink-300 opacity-80">Первая</Badge>
 				<span class="text-xl font-extralight">
 					Это был для меня вызов. Ранее я не сталкивалась со стартапами и с подобной спецификой.
 					Первое время работа вынуждено велась без руководителя проекта, справлялись в паре с
@@ -179,7 +179,7 @@
 			</div>
 
 			<div class="flex flex-col gap-3">
-				<Badge class="rounded bg-pink-950 py-0 text-xl text-pink-400 opacity-80">Вторая</Badge>
+				<Badge class="rounded bg-pink-950 py-0 text-xl text-pink-300 opacity-80">Вторая</Badge>
 				<span class="text-xl font-extralight">
 					Из функциональных требований была только общая идея продукта, и из-за специфики все
 					органичения выяснялись по ходу. Не весь флоу был вовремя и достаточно прояснен, из-за чего
@@ -192,7 +192,7 @@
 			</div>
 
 			<div class="flex flex-col gap-3">
-				<Badge class="rounded bg-pink-950 py-0 text-xl text-pink-400 opacity-80">Третья</Badge>
+				<Badge class="rounded bg-pink-950 py-0 text-xl text-pink-300 opacity-80">Третья</Badge>
 				<span class="text-xl font-extralight">
 					Количество технических тонкестей и нюансов при разработке продукта сильно увеличили
 					трудозатраты проекта и, к сожалению, клиентом было принято решение о заморозке проекта.

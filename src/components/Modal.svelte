@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { beforeNavigate } from '$app/navigation';
 	import type { Snippet } from 'svelte';
 	import { fly } from 'svelte/transition';
 
@@ -10,6 +11,7 @@
 	let { visible = $bindable(), ref = $bindable(), children }: Props = $props();
 
 	function handleClose() {
+		document.body.style.overflow = 'initial';
 		visible = false;
 	}
 
@@ -30,6 +32,10 @@
 			body.style.overflow = 'initial';
 		};
 	}
+
+	beforeNavigate(() => {
+		handleClose();
+	});
 </script>
 
 {#if visible}
