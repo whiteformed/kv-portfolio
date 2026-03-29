@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { beforeNavigate } from '$app/navigation';
 	import type { Snippet } from 'svelte';
 	import { fly } from 'svelte/transition';
 
@@ -11,7 +10,6 @@
 	let { visible = $bindable(), ref = $bindable(), children }: Props = $props();
 
 	function handleClose() {
-		document.body.style.overflow = 'initial';
 		visible = false;
 	}
 
@@ -29,13 +27,12 @@
 		node.focus();
 
 		return () => {
+			if (body.contains(node)) {
+				body.removeChild(node);
+			}
 			body.style.overflow = 'initial';
 		};
 	}
-
-	beforeNavigate(() => {
-		handleClose();
-	});
 </script>
 
 {#if visible}
