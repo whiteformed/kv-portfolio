@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import type { HTMLAttributes } from 'svelte/elements';
-	import { twMerge } from 'tailwind-merge';
-	import type { ClassNameValue } from 'tailwind-merge';
+	import { twMerge, type ClassNameValue } from 'tailwind-merge';
 
 	type Props = HTMLAttributes<HTMLSpanElement> & {
 		class?: ClassNameValue;

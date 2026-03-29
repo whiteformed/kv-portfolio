@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Carousel from './Carousel/Carousel.svelte';
-	import CarouselSlide from './Carousel/CarouselSlide.svelte';
-	import Modal from './Modal.svelte';
 	import type { Picture } from '@sveltejs/enhanced-img';
+	import Carousel from '$components/Carousel/Carousel.svelte';
+	import CarouselSlide from '$components/Carousel/CarouselSlide.svelte';
+	import Modal from '$components/Modal.svelte';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import type { HTMLImgAttributes } from 'svelte/elements';
 	import { twMerge, type ClassNameValue } from 'tailwind-merge';

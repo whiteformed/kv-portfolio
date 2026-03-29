@@ -1,6 +1,5 @@
 <script lang="ts">
-	import type { EmblaPluginType } from 'embla-carousel';
-	import type { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
+	import type { EmblaPluginType, EmblaCarouselType, EmblaOptionsType } from 'embla-carousel';
 	import Autoplay from 'embla-carousel-autoplay';
 	import useEmblaCarousel from 'embla-carousel-svelte';
 	import type { Snippet } from 'svelte';
