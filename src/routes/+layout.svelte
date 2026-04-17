@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import { page } from '$app/state';
-	import KVV from '$images/KVV.svg';
+	import favicon from '$images/favicon.png';
 	import type { Snippet } from 'svelte';
 
 	type Props = {
@@ -19,24 +19,24 @@
 				return 'Кейс | 🛠️ Цифровой инспектор';
 
 			default:
-				return 'Портфолио | Валерия Карлова – продуктовый дизайнер';
+				return 'Портфолио | Карлова Валерия – продуктовый дизайнер';
 		}
 	}
 </script>
 
 <svelte:head>
-	<link rel="icon" href={KVV} />
+	<link rel="icon" href={favicon} type="image/png" />
 	<title>{getTitleByPathName(page.url.pathname)}</title>
-	<meta name="description" content="Валерия Карлова | Личный сайт | Портфолио" />
+	<meta name="description" content="Карлова Валерия | Личный сайт | Портфолио" />
 
-	<meta property="og:title" content="Валерия Карлова" />
+	<meta property="og:title" content="Карлова Валерия" />
 	<meta property="og:description" content="Личный сайт | Портфолио" />
-	<meta property="og:url" content="https://karlova-valeria.ru" />
-	<meta property="og:image" content="/favicon.svg" />
+	<meta property="og:url" content="https://karlova-valeria.ru/" />
+	<meta property="og:image" content={favicon} />
 
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Валерия Карлова | Продуктовый | Личный сайт | Портфолио" />
+	<meta property="og:image:alt" content="Карлова Валерия | Продуктовый | Личный сайт | Портфолио" />
 	<meta property="og:type" content="website" />
 </svelte:head>
 
