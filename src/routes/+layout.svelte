@@ -19,7 +19,7 @@
 				return 'Кейс | 🛠️ Цифровой инспектор';
 
 			default:
-				return 'Портфолио | Карлова Валерия – продуктовый дизайнер';
+				return 'Карлова Валерия – продуктовый дизайнер | Портфолио';
 		}
 	}
 </script>
@@ -29,6 +29,7 @@
 	<title>{getTitleByPathName(page.url.pathname)}</title>
 	<meta name="description" content="Карлова Валерия | Личный сайт | Портфолио" />
 
+	<meta property="og:site_name" content="Карлова Валерия – продуктовый дизайнер" />
 	<meta property="og:title" content="Карлова Валерия" />
 	<meta property="og:description" content="Личный сайт | Портфолио" />
 	<meta property="og:url" content="https://karlova-valeria.ru/" />
@@ -36,7 +37,10 @@
 
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Карлова Валерия | Продуктовый | Личный сайт | Портфолио" />
+	<meta
+		property="og:image:alt"
+		content="Карлова Валерия | Продуктовый дизайнер | Личный сайт | Портфолио"
+	/>
 	<meta property="og:type" content="website" />
 </svelte:head>
 
